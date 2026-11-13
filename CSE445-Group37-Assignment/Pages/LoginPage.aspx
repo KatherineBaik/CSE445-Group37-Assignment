@@ -10,6 +10,8 @@
 <body>
     <form id="formLoginPage" runat="server">
         <div>
+            <h2>Login to your account!!!</h2>
+            <hr />
             <p>Username: <asp:TextBox ID="TextBoxUsername" runat="server"></asp:TextBox></p>
             <p>Password: <asp:TextBox ID="TextBoxPassword" runat="server"></asp:TextBox></p>
             <p><asp:Button ID="ButtonUserLogin" runat="server" Text="User Login" OnClick="ButtonUserLogin_Click" /></p>
