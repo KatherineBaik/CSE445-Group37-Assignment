@@ -26,6 +26,18 @@ namespace CSE445_Group37_Assignment.KBServiceReference1 {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/KBService/AuthenticateStaff", ReplyAction="http://tempuri.org/KBService/AuthenticateStaffResponse")]
         System.Threading.Tasks.Task<bool> AuthenticateStaffAsync(string username, string password);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/KBService/EncryptString", ReplyAction="http://tempuri.org/KBService/EncryptStringResponse")]
+        string EncryptString(string input, string key);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/KBService/EncryptString", ReplyAction="http://tempuri.org/KBService/EncryptStringResponse")]
+        System.Threading.Tasks.Task<string> EncryptStringAsync(string input, string key);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/KBService/DecryptString", ReplyAction="http://tempuri.org/KBService/DecryptStringResponse")]
+        string DecryptString(string input, string key);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/KBService/DecryptString", ReplyAction="http://tempuri.org/KBService/DecryptStringResponse")]
+        System.Threading.Tasks.Task<string> DecryptStringAsync(string input, string key);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -69,6 +81,22 @@ namespace CSE445_Group37_Assignment.KBServiceReference1 {
         
         public System.Threading.Tasks.Task<bool> AuthenticateStaffAsync(string username, string password) {
             return base.Channel.AuthenticateStaffAsync(username, password);
+        }
+        
+        public string EncryptString(string input, string key) {
+            return base.Channel.EncryptString(input, key);
+        }
+        
+        public System.Threading.Tasks.Task<string> EncryptStringAsync(string input, string key) {
+            return base.Channel.EncryptStringAsync(input, key);
+        }
+        
+        public string DecryptString(string input, string key) {
+            return base.Channel.DecryptString(input, key);
+        }
+        
+        public System.Threading.Tasks.Task<string> DecryptStringAsync(string input, string key) {
+            return base.Channel.DecryptStringAsync(input, key);
         }
     }
 }

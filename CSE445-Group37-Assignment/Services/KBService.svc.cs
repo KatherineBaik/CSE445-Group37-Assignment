@@ -42,6 +42,20 @@ namespace CSE445_Group37_Assignment
             return false;
         }
 
+        // Work by: Katherine Baik
+        // Service to expose DLL functions
+        public string EncryptString(string input, string key)
+        {
+            return KBUtilities.EncryptString(input, key);
+        }
+
+        // Work by: Katherine Baik
+        // Service to expose DLL functions
+        public string DecryptString(string input, string key)
+        {
+            return KBUtilities.DecryptString(input, key);
+        }
+
 
         // Hard-coded values (needs to be removed later / moved elsewhere)
         private Dictionary<string, string> UserAccounts;

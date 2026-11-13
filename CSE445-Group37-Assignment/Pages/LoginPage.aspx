@@ -17,8 +17,7 @@
             <p><asp:Button ID="ButtonUserLogin" runat="server" Text="User Login" OnClick="ButtonUserLogin_Click" /></p>
             <p><asp:Button ID="ButtonStaffLogin" runat="server" Text="Staff Login" OnClick="ButtonStaffLogin_Click" /></p>
 
-            <p><asp:Label ID="LabelInvalidLogin" runat="server" Text="Username or password is incorrect." Visible="False"></asp:Label>
-            </p>
+            <p><asp:Label ID="LabelInvalidLogin" runat="server" Text="Username or password is incorrect." Visible="False"></asp:Label></p>
         </div>
         
     </form>

@@ -82,6 +82,7 @@
     </None>
     <Content Include="Pages\CSS\LoginPage.css" />
     <Content Include="Pages\LoginPage.aspx" />
+    <Content Include="Pages\TryIt\KB%27s TryIt.aspx" />
     <Content Include="Services\KBService.svc" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -97,6 +98,13 @@
     </Compile>
     <Compile Include="Pages\LoginPage.aspx.designer.cs">
       <DependentUpon>LoginPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\TryIt\KB%27s TryIt.aspx.cs">
+      <DependentUpon>KB%27s TryIt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\TryIt\KB%27s TryIt.aspx.designer.cs">
+      <DependentUpon>KB%27s TryIt.aspx</DependentUpon>
     </Compile>
     <Compile Include="Services\KBService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -15,5 +15,12 @@ namespace CSE445_Group37_Assignment
         [OperationContract]
         bool AuthenticateStaff(string username, string password);
 
+        // Work by: Katherine Baik
+        [OperationContract]
+        string EncryptString(string input, string key);
+
+        // Work by: Katherine Baik
+        [OperationContract]
+        string DecryptString(string input, string key);
     }
 }

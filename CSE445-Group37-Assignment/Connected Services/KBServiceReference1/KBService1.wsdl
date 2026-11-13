@@ -18,6 +18,18 @@
   <wsdl:message name="KBService_AuthenticateStaff_OutputMessage">
     <wsdl:part name="parameters" element="tns:AuthenticateStaffResponse" />
   </wsdl:message>
+  <wsdl:message name="KBService_EncryptString_InputMessage">
+    <wsdl:part name="parameters" element="tns:EncryptString" />
+  </wsdl:message>
+  <wsdl:message name="KBService_EncryptString_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EncryptStringResponse" />
+  </wsdl:message>
+  <wsdl:message name="KBService_DecryptString_InputMessage">
+    <wsdl:part name="parameters" element="tns:DecryptString" />
+  </wsdl:message>
+  <wsdl:message name="KBService_DecryptString_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DecryptStringResponse" />
+  </wsdl:message>
   <wsdl:portType name="KBService">
     <wsdl:operation name="AuthenticateUser">
       <wsdl:input wsaw:Action="http://tempuri.org/KBService/AuthenticateUser" message="tns:KBService_AuthenticateUser_InputMessage" />
@@ -26,6 +38,14 @@
     <wsdl:operation name="AuthenticateStaff">
       <wsdl:input wsaw:Action="http://tempuri.org/KBService/AuthenticateStaff" message="tns:KBService_AuthenticateStaff_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/KBService/AuthenticateStaffResponse" message="tns:KBService_AuthenticateStaff_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EncryptString">
+      <wsdl:input wsaw:Action="http://tempuri.org/KBService/EncryptString" message="tns:KBService_EncryptString_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/KBService/EncryptStringResponse" message="tns:KBService_EncryptString_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DecryptString">
+      <wsdl:input wsaw:Action="http://tempuri.org/KBService/DecryptString" message="tns:KBService_DecryptString_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/KBService/DecryptStringResponse" message="tns:KBService_DecryptString_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_KBService" type="tns:KBService">
@@ -41,6 +61,24 @@
     </wsdl:operation>
     <wsdl:operation name="AuthenticateStaff">
       <soap:operation soapAction="http://tempuri.org/KBService/AuthenticateStaff" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EncryptString">
+      <soap:operation soapAction="http://tempuri.org/KBService/EncryptString" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DecryptString">
+      <soap:operation soapAction="http://tempuri.org/KBService/DecryptString" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
