@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="CSE445_Group37_Assignment.Services.Service1" CodeBehind="JAService.svc.cs" %>

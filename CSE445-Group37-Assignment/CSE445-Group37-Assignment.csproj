@@ -47,6 +47,9 @@
     <Reference Include="CSE445-KBUtilities">
       <HintPath>..\..\CSE445-KBUtilities\CSE445-KBUtilities\bin\Debug\CSE445-KBUtilities.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=2.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.ServiceModel" />
@@ -68,11 +71,6 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
-      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
-    </Reference>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Connected Services\KBServiceReference1\KBService.disco" />
     <None Include="Connected Services\KBServiceReference1\configuration91.svcinfo" />
     <None Include="Connected Services\KBServiceReference1\configuration.svcinfo" />
@@ -80,10 +78,15 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+    <Content Include="Controls\WelcomeUser.ascx" />
     <Content Include="Pages\CSS\LoginPage.css" />
+    <Content Include="Pages\CSS\RegisterPage.css" />
     <Content Include="Pages\LoginPage.aspx" />
     <Content Include="Pages\TryIt\KB%27s TryIt.aspx" />
+    <Content Include="Pages\RegisterPage.aspx" />
+    <Content Include="Pages\TryIt\JA%27s TryIt.aspx" />
     <Content Include="Services\KBService.svc" />
+    <Content Include="Services\JAService.svc" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -91,6 +94,13 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\WelcomeUser.ascx.cs">
+      <DependentUpon>WelcomeUser.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\WelcomeUser.ascx.designer.cs">
+      <DependentUpon>WelcomeUser.ascx</DependentUpon>
     </Compile>
     <Compile Include="Pages\LoginPage.aspx.cs">
       <DependentUpon>LoginPage.aspx</DependentUpon>
@@ -106,10 +116,28 @@
     <Compile Include="Pages\TryIt\KB%27s TryIt.aspx.designer.cs">
       <DependentUpon>KB%27s TryIt.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Pages\RegisterPage.aspx.cs">
+      <DependentUpon>RegisterPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\RegisterPage.aspx.designer.cs">
+      <DependentUpon>RegisterPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\TryIt\JA%27s TryIt.aspx.cs">
+      <DependentUpon>JA%27s TryIt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\TryIt\JA%27s TryIt.aspx.designer.cs">
+      <DependentUpon>JA%27s TryIt.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Services\IJAService.cs" />
     <Compile Include="Services\KBService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\KBService.svc.cs">
       <DependentUpon>KBService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Services\JAService.svc.cs">
+      <DependentUpon>JAService.svc</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
